@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Maintenance</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* --- CSS Reset & Basic Styles --- */
+        :root {
+            --primary-color: #4A90E2; /* A nice, friendly blue */
+            --dark-color: #2c3e50;    /* Dark gray for text */
+            --light-color: #f4f7f6;   /* Light gray for the background */
+            --white-color: #ffffff;
+        }
+
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--light-color);
+            color: var(--dark-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* --- Main Container --- */
+        .container {
+            max-width: 800px;
+            width: 100%;
+            background-color: var(--white-color);
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        /* --- Logo --- */
+        .logo {
+            width: 150px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        /* --- SVG Illustration --- */
+        .illustration {
+            width: 100%;
+            max-width: 350px;
+            margin: 30px 0;
+        }
+        
+        /* Animation for the gear inside the SVG */
+        /* .gear {
+            animation: spin 10s linear infinite;
+            transform-origin: center;
+        } */
+
+        /* --- Text Content --- */
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--dark-color);
+            margin-bottom: 15px;
+        }
+
+        p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #555;
+            max-width: 450px;
+        }
+
+        /* --- Keyframe Animations --- */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes spin {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* --- Responsive Adjustments --- */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2rem;
+            }
+            p {
+                font-size: 1rem;
+            }
+            .container {
+                padding: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <main class="container">
+        <img src="https://bestconsultant-sandbox.s3.eu-west-3.amazonaws.com/Logo_firm_56ba18d4890fb721c99f49ad-476.png" class="logo" alt="Logo">
+
+
+        <svg class="illustration" viewBox="0 0 350 250" xmlns="http://www.w3.org/2000/svg">
+            <rect x="10" y="50" width="330" height="190" rx="15" fill="#e0e6ed"/>
+            <rect x="0" y="230" width="350" height="20" rx="5" fill="#d0d6de"/>
+            
+            <rect x="30" y="70" width="200" height="120" rx="10" fill="#2c3e50"/>
+            <path d="M 50 130 L 80 130 L 95 100 L 110 150 L 130 120 L 160 120" stroke="#4A90E2" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            
+            <circle cx="270" cy="115" r="25" fill="#f2d4b7"/> <!-- Head -->
+            <rect x="245" y="140" width="50" height="70" rx="10" fill="#4A90E2"/> <!-- Body -->
+            <path d="M 245 160 C 220 170, 220 190, 235 195" stroke="#4A90E2" stroke-width="12" fill="none" stroke-linecap="round"/> <!-- Arm -->
+            
+
+        </svg>
+
+        <h1>We'll be back soon!</h1>
+        <p>
+            Sorry for the inconvenience. We're currently performing some maintenance
+            to improve our service. We will be back online shortly. Thank you for your patience!
+        </p>
+
+    </main>
+
+</body>
+</html>
